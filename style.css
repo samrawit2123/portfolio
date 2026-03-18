@@ -1,19 +1,27 @@
-body{
-font-family:Arial;
+/* RESET */
+*{
 margin:0;
-background:#f4f6f9;
+padding:0;
+box-sizing:border-box;
 }
 
-/* NAVIGATION */
+/* BODY */
+body{
+font-family: 'Segoe UI', Arial, sans-serif;
+background:#f5f7fa;
+color:#333;
+}
+
+/* NAVBAR */
 nav{
-background:#222;
-padding:10px;
+background:#0d6efd;
+padding:15px;
 }
 
 .nav-menu{
 display:flex;
 justify-content:center;
-gap:25px;
+gap:30px;
 list-style:none;
 }
 
@@ -21,10 +29,11 @@ list-style:none;
 color:white;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 .nav-menu a:hover{
-color:#0d6efd;
+color:#ffd43b;
 }
 
 /* HERO SECTION */
@@ -32,9 +41,13 @@ color:#0d6efd;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:60px;
-background: linear-gradient(to right, #fdf6f0, #e6c7a3);
 flex-wrap:wrap;
+padding:60px;
+margin:30px;
+
+background:white;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
 .hero-text{
@@ -42,7 +55,8 @@ max-width:500px;
 }
 
 .hero-text h1{
-font-size:40px;
+font-size:38px;
+color:#0d6efd;
 }
 
 .hero-text p{
@@ -54,30 +68,64 @@ line-height:1.6;
 .btn{
 display:inline-block;
 margin-top:20px;
-padding:10px 20px;
+padding:12px 25px;
 background:#0d6efd;
 color:white;
 text-decoration:none;
-border-radius:5px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0b5ed7;
 }
 
 /* IMAGE */
 .hero-image img{
-width:250px;
-height:250px;
+width:220px;
+height:220px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid #0d6efd;
+border:4px solid #0d6efd;
 }
 
 /* SECTION */
 section{
 max-width:900px;
-margin:auto;
-padding:40px;
-line-height:1.6;
+margin:20px auto;
+padding:35px;
+
+background:white;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+line-height:1.7;
 }
 
+/* HEADINGS */
 h2{
 color:#0d6efd;
+margin-bottom:20px;
+}
+
+/* PROJECTS */
+h3{
+margin-top:15px;
+color:#333;
+}
+
+/* ABOUT PAGE */
+.about-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.about-image img{
+width:200px;
+height:200px;
+border-radius:50%;
+border:4px solid #0d6efd;
 }
