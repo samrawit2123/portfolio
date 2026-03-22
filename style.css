@@ -13,11 +13,55 @@ body {
   min-height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= JS FRAME (NEON GLOW) ================= */
+.js-frame {
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid #ffcc00;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255,204,0,0.5);
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.js-frame:hover {
+  box-shadow: 0 0 40px rgba(255,204,0,0.8), 0 0 60px rgba(255,204,0,0.5);
+  transform: scale(1.01);
+}
+
+.js-frame::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #ffcc00;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ffcc00;
+  animation: glow 2s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px #ffcc00; }
+  50% { box-shadow: 0 0 30px #ffcc00, 0 0 60px #ff9900; }
+  100% { box-shadow: 0 0 40px #ffcc00, 0 0 80px #ff9900; }
+}
+
 /* ================= NAVBAR ================= */
 nav {
   background: #1a2a40;
   padding: 20px 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-menu {
@@ -42,12 +86,16 @@ nav {
   color: #ffcc00;
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= SECTIONS ================= */
+section {
+  padding: 80px 10%;
+}
+
+/* ================= HERO (HOME + ABOUT) ================= */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 10%;
   gap: 50px;
 }
 
@@ -56,6 +104,21 @@ nav {
   text-align: left;
 }
 
+/* ================= ABOUT SECTION CENTERED ================= */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#about .hero-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+/* ================= TEXT ================= */
 .hero-content h1 {
   font-size: 48px;
   font-weight: 700;
@@ -71,7 +134,7 @@ nav {
   line-height: 1.6;
 }
 
-/* HERO IMAGE */
+/* ================= HERO IMAGE ================= */
 .hero-image img {
   width: 270px;
   height: 270px;
@@ -81,7 +144,7 @@ nav {
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* ================= BUTTONS ================= */
+/* ================= BUTTON ================= */
 .btn {
   display: inline-block;
   padding: 14px 30px;
@@ -104,35 +167,33 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  padding: 60px 0;
 }
 
 /* ================= TITLES ================= */
 .title {
   font-size: 42px;
   margin-bottom: 50px;
-  color: #ffffff;
   font-weight: 700;
 }
 
-/* ================= CARDS GRID ================= */
+/* ================= GRID ================= */
 .grid {
   display: flex;
-  flex-wrap: nowrap;          /* horizontal row */
-  justify-content: center;    /* center horizontally */
-  align-items: flex-start;
-  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
+/* ================= CARDS ================= */
 .card {
-  flex: 0 1 180px;                     /* card width */
-  background: rgba(255,255,255,0.1);   /* transparent card */
-  padding: 20px;
+  width: 220px;
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  color: white;
   text-align: center;
   transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card:hover {
@@ -143,7 +204,6 @@ nav {
   color: #ffcc00;
   margin-bottom: 10px;
   font-size: 18px;
-  font-weight: 700;
 }
 
 .card p {
@@ -152,21 +212,24 @@ nav {
   line-height: 1.5;
 }
 
-/* ================= CONTACT GRID ================= */
+/* ================= CONTACT ================= */
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* info + form */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   gap: 30px;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
 
-.contact-info {
+.contact-info,
+form {
+  width: 300px;
   background: rgba(255,255,255,0.1);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   text-align: center;
-  color: white;
 }
 
 .contact-info h3 {
@@ -176,15 +239,6 @@ nav {
 
 .contact-info p {
   margin-bottom: 10px;
-}
-
-form {
-  background: rgba(255,255,255,0.1);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  color: white;
-  text-align: center;
 }
 
 input,
@@ -232,7 +286,6 @@ footer {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 60px 5%;
   }
 
   .hero-content {
@@ -258,16 +311,16 @@ footer {
   }
 
   .grid {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .card {
-    flex: 0 1 100%;
-    margin-bottom: 20px;
+    width: 90%;
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 }
