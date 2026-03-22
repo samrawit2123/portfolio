@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+/* RESET u*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ================= BODY ================= */
+/* BODY */
 body {
   background: linear-gradient(135deg, #141e30, #243b55);
   color: #fff;
@@ -17,7 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ================= JS FRAME (NEON GLOW) ================= */
+/* JS FRAME */
 .js-frame {
   margin: 20px;
   padding: 20px;
@@ -54,7 +54,7 @@ html {
   100% { box-shadow: 0 0 40px #ffcc00, 0 0 80px #ff9900; }
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 nav {
   background: #1a2a40;
   padding: 20px 0;
@@ -62,6 +62,17 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* LOGO (ADDED ONLY) */
+.logo {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffcc00;
+  letter-spacing: 2px;
 }
 
 .nav-menu {
@@ -86,12 +97,12 @@ nav {
   color: #ffcc00;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTION */
 section {
   padding: 80px 10%;
 }
 
-/* ================= HERO (HOME + ABOUT) ================= */
+/* HERO (HOME + ABOUT)  */
 .hero {
   display: flex;
   align-items: center;
@@ -104,7 +115,7 @@ section {
   text-align: left;
 }
 
-/* ================= ABOUT SECTION CENTERED ================= */
+/* ABOUT SECTION CENTERED */
 #about {
   display: flex;
   justify-content: center;
@@ -118,7 +129,7 @@ section {
   text-align: center;
 }
 
-/* ================= TEXT ================= */
+/* TEXT */
 .hero-content h1 {
   font-size: 48px;
   font-weight: 700;
@@ -134,7 +145,7 @@ section {
   line-height: 1.6;
 }
 
-/* ================= HERO IMAGE ================= */
+/* HERO IMAGE */
 .hero-image img {
   width: 270px;
   height: 270px;
@@ -144,7 +155,7 @@ section {
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* ================= BUTTON ================= */
+/* BUTTON */
 .btn {
   display: inline-block;
   padding: 14px 30px;
@@ -161,7 +172,7 @@ section {
   transform: scale(1.05);
 }
 
-/* ================= CONTAINER ================= */
+/* CONTAINER */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -169,14 +180,14 @@ section {
   text-align: center;
 }
 
-/* ================= TITLES ================= */
+/* TITLES */
 .title {
   font-size: 42px;
   margin-bottom: 50px;
   font-weight: 700;
 }
 
-/* ================= GRID ================= */
+/* GRID */
 .grid {
   display: flex;
   justify-content: center;
@@ -185,7 +196,7 @@ section {
   flex-wrap: wrap;
 }
 
-/* ================= CARDS ================= */
+/* CARDS */
 .card {
   width: 220px;
   background: rgba(255,255,255,0.1);
@@ -212,7 +223,7 @@ section {
   line-height: 1.5;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 .contact-grid {
   display: flex;
   justify-content: center;
@@ -272,7 +283,7 @@ button:hover {
   background: #1a4fb3;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
